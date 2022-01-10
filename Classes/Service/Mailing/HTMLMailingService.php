@@ -49,7 +49,7 @@ class HTMLMailingService extends AbstractMailingService
         )
             ->setTo($recipient->getEmail())
             ->setSubject($subject)
-            ->setBody($bodyText, 'text/html')
+            ->html($bodyText)
             ->send();
     }
 }
